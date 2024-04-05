@@ -38,9 +38,27 @@ export function setupSidebar(sidebar: HTMLDivElement) {
             <div class="sidebar_footer" id="footer"></div>
         </div>
     `;
+
+    const collapse = document.querySelector('.sidebar_expand');
+    collapse?.addEventListener('click', (e: Event) => {
+        e.preventDefault();
+        const body = document.querySelector('body');
+        const iconExpand = document.querySelector('.sidebar_expand i');
+        body?.classList.toggle('collapse');
+        const hasCollapse = body?.classList.contains('collapse');
+        if (hasCollapse) {
+            iconExpand?.classList.remove('fa-chevron-left');
+            iconExpand?.classList.add('fa-chevron-right');
+        } else {
+            iconExpand?.classList.remove('fa-chevron-right');
+            iconExpand?.classList.add('fa-chevron-left');
+        }
+
+    });
+
+
     setupHeader(document.querySelector<HTMLDivElement>("#header")!);
     setupMenu(document.querySelector<HTMLDivElement>("#main")!);
     setupComunication(document.querySelector<HTMLDivElement>("#comunication")!);
-
     setupFooter(document.querySelector<HTMLDivElement>("#footer")!);
 }
