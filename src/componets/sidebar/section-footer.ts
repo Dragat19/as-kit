@@ -3,7 +3,7 @@ export function setupFooter(footer: HTMLElement) {
     profile.className = 'profile';
     profile.innerHTML = `
         <div class="profile-user">
-            <img class="profile-avatar" src="/src/assets/images/photo.png" />
+            <img class="profile-avatar" src="../../../src/assets/images/photo.png" />
             <div>
                 <h6>Albert Sanchez</h6>
                 <label>asanchez@gmail.com</label>
