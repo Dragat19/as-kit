@@ -1,4 +1,4 @@
 export default {
   // config options
-  base: "/as-sidebar/",
+  base: "/as-kit/",
 };
